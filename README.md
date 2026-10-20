@@ -1,12 +1,12 @@
-Linux SSH Security Lab
+#Linux SSH Security Lab
 
-Overview
+##Overview
 
 This project documents my hands-on experience configuring SSH remote access and securing an SSH server using Kali Linux and Xubuntu in a VirtualBox lab environment.
 
 The goal of this lab was to understand how SSH authentication works, how to configure remote access, and how to reduce common security risks.
 
-Lab Environment
+##Lab Environment
 
 Virtualization: Oracle VirtualBox
 
@@ -16,9 +16,9 @@ SSH Server: Xubuntu 24.04
 
 Tools: OpenSSH, Linux Terminal, Nano
 
-What I Learned
+##What I Learned
 
-1. SSH Remote Access
+###1. SSH Remote Access
 
 Generated SSH public and private keys.
 
@@ -28,7 +28,7 @@ Added a public key to the server's authorized_keys file.
 
 Verified remote access using SSH keys.
 
-2. SSH Server Hardening
+###2. SSH Server Hardening
 
 Implemented and tested four security configurations:
 
@@ -40,7 +40,7 @@ Disable Root Login: Prevent direct SSH login as root.
 
 Limit Remote Users: Use AllowUsers to restrict SSH access to specific accounts.
 
-3. Troubleshooting and Verification
+###3. Troubleshooting and Verification
 
 Tested successful and unsuccessful SSH login attempts.
 
@@ -50,13 +50,13 @@ Troubleshot SSH connection and authentication issues.
 
 Documented commands, screenshots, and results.
 
-Lab Documentation
+##Lab Documentation
 
 The complete step-by-step documentation, including commands, explanations, and screenshots, is available here:
 
 View SSH Security Lab Documentation
 
-Key Takeaway
+##Key Takeaway
 
 This lab helped me understand that securing an SSH server requires multiple security measures rather than relying on a single configuration.
 
