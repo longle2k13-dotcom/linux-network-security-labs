@@ -1,63 +1,89 @@
-#Linux SSH Security Lab
 
-##Overview
+# Linux & Network Security Labs
 
-This project documents my hands-on experience configuring SSH remote access and securing an SSH server using Kali Linux and Xubuntu in a VirtualBox lab environment.
+## Overview
 
-The goal of this lab was to understand how SSH authentication works, how to configure remote access, and how to reduce common security risks.
+This repository showcases my hands-on experience with Linux system administration, SSH security, firewall configuration, and network troubleshooting.
 
-##Lab Environment
+These projects were completed in a virtualized lab environment using Kali Linux, Xubuntu, and OPNsense.
 
-Virtualization: Oracle VirtualBox
+My objective is to develop practical cybersecurity and networking skills through configuring security controls, testing their behavior, troubleshooting issues, and documenting the results.
 
-SSH Client: Kali Linux
+## Lab Projects
 
-SSH Server: Xubuntu 24.04
+### 01 — SSH Remote Access & Server Hardening
 
-Tools: OpenSSH, Linux Terminal, Nano
+**Technologies:** Kali Linux, Xubuntu, OpenSSH, Oracle VirtualBox
 
-##What I Learned
+Configured and secured SSH remote access between Linux virtual machines.
 
-###1. SSH Remote Access
+**Key Implementations:**
+- Generated SSH key pairs and configured key-based authentication.
+- Disabled password-based SSH authentication.
+- Changed the default SSH port from 22 to 4444.
+- Restricted direct root login.
+- Limited SSH access to authorized users using `AllowUsers`.
+- Tested authentication behavior and troubleshot connection issues.
 
-Generated SSH public and private keys.
+**Skills Demonstrated:** Linux Administration, SSH Security, Access Control, Authentication, Troubleshooting
 
-Configured key-based authentication.
+[View SSH Security Lab](./01-SSH-Security/)
 
-Added a public key to the server's authorized_keys file.
+---
 
-Verified remote access using SSH keys.
+### 02 — Firewall & Network Security (UFW + OPNsense)
 
-###2. SSH Server Hardening
+**Technologies:** Xubuntu, Kali Linux, UFW, OPNsense 26.7, Oracle VirtualBox
 
-Implemented and tested four security configurations:
+Configured host-based and network-based firewall security controls in a virtualized networking environment.
 
-Disable Password Authentication: Restrict password-based SSH logins.
+**Key Implementations:**
+- Configured UFW default-deny incoming traffic policies.
+- Created SSH (TCP/22) and HTTP (TCP/80) firewall exceptions.
+- Tested firewall rule precedence using conflicting allow and deny rules.
+- Installed and configured an OPNsense virtual firewall.
+- Assigned WAN and LAN interfaces using MAC address verification.
+- Connected Xubuntu to an isolated internal network.
+- Troubleshot network connectivity and verified successful ICMP communication.
+- Created an inbound WAN firewall rule permitting TCP destination port 443.
 
-Change Default SSH Port: Change port 22 to 4444 to reduce automated scans targeting the default port.
+**Skills Demonstrated:** Firewall Administration, Network Segmentation, TCP/IP, Access Control, Virtual Networking, Troubleshooting
 
-Disable Root Login: Prevent direct SSH login as root.
+[View Firewall & Network Security Lab](./02-Firewall-Security/)
 
-Limit Remote Users: Use AllowUsers to restrict SSH access to specific accounts.
+---
 
-###3. Troubleshooting and Verification
+## Lab Environment
 
-Tested successful and unsuccessful SSH login attempts.
+| Component | Technology |
+|---|---|
+| Virtualization | Oracle VirtualBox |
+| Operating Systems | Kali Linux, Xubuntu 24.04, OPNsense 26.7 |
+| Remote Access | OpenSSH |
+| Host-Based Firewall | UFW |
+| Network Firewall | OPNsense |
+| Network Configuration | NAT, Internal Networks, WAN/LAN |
+| Testing Tools | SSH, ping, curl, Linux CLI |
 
-Verified SSH key authentication.
+## Technical Skills Developed
 
-Troubleshot SSH connection and authentication issues.
+- Linux system administration and command-line operations
+- SSH authentication and server hardening
+- Firewall policy configuration and rule management
+- Network segmentation and interface assignment
+- TCP/IP networking and connectivity verification
+- Security troubleshooting and root cause investigation
+- Technical documentation and evidence-based verification
 
-Documented commands, screenshots, and results.
+## Documentation Approach
 
-##Lab Documentation
+Each lab includes a dedicated README and a detailed PDF report containing configuration steps, screenshots, testing results, and troubleshooting observations.
 
-The complete step-by-step documentation, including commands, explanations, and screenshots, is available here:
+The documentation distinguishes between successfully verified outcomes and configuration steps that were not independently tested.
 
-View SSH Security Lab Documentation
+## Project Development
 
-##Key Takeaway
+This repository will continue to expand as I complete additional Linux, networking, and cybersecurity labs.
 
-This lab helped me understand that securing an SSH server requires multiple security measures rather than relying on a single configuration.
+My focus is on developing practical technical skills and maintaining a documented portfolio that demonstrates my learning progress and hands-on experience.
 
-It also gave me practical experience with Linux administration, SSH authentication, troubleshooting, and technical documentation.
